@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    api project(':core:base')
+    api project(':model')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

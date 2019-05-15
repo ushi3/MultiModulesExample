@@ -1,0 +1,74 @@
+/*
+ * これですべて管理するのは手間なので、コアなものだけ管理する。
+ * UIライブラリやFirebase Analyticsやらの、根本では使わないものはいつもどおり書いてOK
+ */
+
+// android build env
+ext.androidBuild = [
+        'compileSdkVersion': 28,
+        'buildToolsVersion': '28.0.3',
+        'targetSdkVersion' : 28,
+        'minSdkVersion'    : 21
+]
+
+// versions
+ext.versions = [
+        'kotlin'      : '1.3.31',
+        'androidx'    : [
+                'appcompat'       : '1.0.2',
+                'recyclerview'    : '1.0.0',
+                'cardview'        : '1.0.0',
+                'constraintlayout': '2.0.0-alpha2',
+        ],
+        'arch'        : [
+                'lifecycle': '2.0.0'
+        ],
+        'material': '1.0.0',
+        'rxjava2'     : '2.2.6',
+        'rx_android'  : '2.1.0',
+        'stream'      : '1.2.1',
+        'threeten_abp': '1.1.1',
+        'test'        : [
+                'junit'   : '4.12',
+                'android' : '1.1.1',
+                'espresso': '3.1.1',
+                'assertj' : [
+                        'core'   : '3.11.1',
+                        'android': '1.2.0'
+                ]
+        ]
+]
+
+// dependencies
+ext.deps = [
+        'kotlin'      : [
+                'stdlibJvm': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+        ],
+        'androidx'    : [
+                'appcompat'       : "androidx.appcompat:appcompat:$versions.androidx.appcompat",
+                'recyclerview'    : "androidx.recyclerview:recyclerview:$versions.androidx.recyclerview",
+                'cardview'        : "androidx.cardview:cardview:$versions.androidx.cardview",
+                'constraintlayout': "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
+        ],
+        'arch'        : [
+                'lifecycle': [
+                        'viewmodel': "androidx.lifecycle:lifecycle-viewmodel:$versions.arch.lifecycle",
+                        'extension': "androidx.lifecycle:lifecycle-extensions:$versions.arch.lifecycle",
+                        'java8'    : "androidx.lifecycle:lifecycle-common-java8:$versions.arch.lifecycle"
+                ]
+        ],
+        'material': "com.google.android.material:material:$versions.material",
+        'rxjava2'     : "io.reactivex.rxjava2:rxjava:$versions.rxjava2",
+        'rx_android'  : "io.reactivex.rxjava2:rxandroid:$versions.rx_android",
+        'stream'      : "com.annimon:stream:$versions.stream",
+        'threeten_abp': "com.jakewharton.threetenabp:threetenabp:$versions.threeten_abp",
+        'test'        : [
+                'junit'   : "junit:junit:$versions.test.junit",
+                'android' : "androidx.test:runner:$versions.test.android",
+                'espresso': "androidx.test.espresso:espresso-core:$versions.test.espresso",
+                'assertj' : [
+                        'core'   : "org.assertj:assertj-core:$versions.test.assertj.core",
+                        'android': "com.squareup.assertj:assertj-android:$versions.test.assertj.android"
+                ]
+        ]
+]

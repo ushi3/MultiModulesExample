@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ushi.example.feature.speaker">
+
+    <application>
+
+        <activity
+            android:name=".SpeakerActivity" />
+
+    </application>
+
+</manifest>

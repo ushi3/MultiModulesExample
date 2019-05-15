@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+apply from: rootProject.file('gradle/android.gradle')
+
+dependencies {
+    api project(':core:base')
+    api project(':data:repository')
+
+    api deps.androidx.appcompat
+    api deps.androidx.recyclerview
+    api deps.androidx.cardview
+    api deps.androidx.constraintlayout
+    api deps.material
+
+    api deps.arch.lifecycle.viewmodel
+    api deps.arch.lifecycle.extension
+
+    api deps.rx_android
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.android
+    androidTestImplementation deps.test.espresso
+}

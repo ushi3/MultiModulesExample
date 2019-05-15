@@ -1,0 +1,12 @@
+include(
+        ':app',
+        ':core:base',
+        ':core:android',
+        ':model',
+
+        ':data:repository',
+        ':data:repository-impl',
+
+        ':feature:speaker',
+        ':feature:session',
+)
