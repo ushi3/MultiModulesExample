@@ -35,6 +35,7 @@ dependencies {
 
     implementation project(':feature:speaker')
     implementation project(':feature:session')
+    implementation project(':feature:about')
 
     implementation deps.kotlin.stdlibJvm
 

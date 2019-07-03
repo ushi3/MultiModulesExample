@@ -13,32 +13,18 @@
             android:id="@id/appbar_binding"
             layout="@layout/appbar" />
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_go_speaker"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="to Speaker"
-                tools:ignore="HardcodedText" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_go_session"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="to Session"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/menu_bottom_nav" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
