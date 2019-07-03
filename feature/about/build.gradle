@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+apply from: rootProject.file('gradle/android.gradle')
+
+dependencies {
+    implementation project(':core:android')
+
+    implementation deps.kotlin.stdlibJvm
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.android
+    androidTestImplementation deps.test.espresso
+}

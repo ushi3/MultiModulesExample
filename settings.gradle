@@ -9,4 +9,5 @@ include(
 
         ':feature:speaker',
         ':feature:session',
+        ':feature:about',
 )
